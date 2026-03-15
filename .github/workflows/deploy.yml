@@ -7,7 +7,25 @@ on:
   workflow_dispatch:
 
 jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run ESLint
+        run: npm run lint
+
   build-and-deploy:
+    needs: lint
     runs-on: ubuntu-latest
 
     steps:
@@ -24,6 +42,13 @@ jobs:
 
       - name: Build
         run: npm run build
+
+      - name: Validate build output
+        run: |
+          if [ ! -d "./docs" ]; then
+            echo "ERROR: expected ./docs folder after build, but it does not exist." >&2
+            exit 1
+          fi
 
       - name: Upload artifact for GitHub Pages
         uses: actions/upload-pages-artifact@v2
