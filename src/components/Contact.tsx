@@ -17,9 +17,10 @@ export default function Contact() {
               Let’s build something together
             </h2>
             <p className="mt-3 max-w-xl text-sm text-slate-600 dark:text-slate-300">
-              I’m always open to new opportunities. Whether it’s a full product
-              build, UI leadership, or consulting on frontend architecture —
-              let’s chat.
+              I’m always open to new opportunities—from genomic data pipelines
+              to production‑ready software systems. Whether it’s a research
+              tool, a full product build, or architectural guidance, let’s build
+              something together. Let’s chat.
             </p>
           </div>
           <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm dark:border-slate-800 dark:bg-slate-900">

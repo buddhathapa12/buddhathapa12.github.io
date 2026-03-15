@@ -45,7 +45,7 @@ export type Profile = {
 
 export const profile: Profile = {
   name: "Buddha Thapa Magar",
-  title: "Frontend Developer / Bioinformatics Researcher",
+  title: "Software Engineer / Bioinformatics Researcher",
   location: "Hays, Kansas",
   phone: "+1 316 670 4747",
   linkedin: "https://www.linkedin.com/in/buddha-thapa-magar",
