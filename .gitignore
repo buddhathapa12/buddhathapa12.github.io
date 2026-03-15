@@ -26,3 +26,6 @@ dist-ssr
 # Impeccable UI files
 .agents
 skills-lock.json
+
+#Agency - Agent
+agency-agents
