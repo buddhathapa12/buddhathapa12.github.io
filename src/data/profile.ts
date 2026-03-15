@@ -45,13 +45,14 @@ export type Profile = {
 
 export const profile: Profile = {
   name: "Buddha Thapa Magar",
-  title: "Software Engineer / Bioinformatics Researcher",
+  title:
+    "I build high-performance software that turns complex genomic data into actionable insights.",
   location: "Hays, Kansas",
   phone: "+1 316 670 4747",
   linkedin: "https://www.linkedin.com/in/buddha-thapa-magar",
   github: "https://github.com/buddhathapa12",
   email: "b_thapamagar@mail.fhsu.edu",
-  about: `A dedicated software engineer specializing in bioinformatics and computational biology, with a strong background in developing tools and pipelines for genomic data analysis. Experienced in working with DNA sequencing data, genome assembly from SRA records, and analyzing complex genome sequences to extract meaningful biological insights. Proficient in data science, data mining, and Linux-based environments, with a passion for building scalable, user-friendly systems that support scientific research and enterprise-level biological workflows. A strategic thinker and innovative problem-solver, committed to advancing biological discovery through reliable, high-performance software solutions.`,
+  about: `I’m a software engineer focused on bioinformatics and computational biology, with hands-on experience building tools and pipelines for DNA sequencing analysis, genome assembly, and large-scale biological data workflows. I specialize in transforming raw genomic data into reliable, scalable systems—combining strong data science skills, Linux-based engineering, and a product-driven mindset to support research teams and enterprise-level biology platforms.`,
 
   skills: [
     "Python",

@@ -1,8 +1,10 @@
 import type { Project } from "../data/profile";
+import Button from "./ui/Button";
+import Card from "./ui/Card";
 
 export default function ProjectCard({ project }: { project: Project }) {
   return (
-    <article className="group rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
+    <Card className="group transition hover:-translate-y-1 hover:shadow-md">
       <div className="flex items-start justify-between gap-4">
         <div>
           <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100">
@@ -25,14 +27,11 @@ export default function ProjectCard({ project }: { project: Project }) {
       </div>
 
       <div className="mt-6">
-        <a
-          href={project.link}
-          className="inline-flex items-center gap-2 text-sm font-semibold text-indigo-600 transition hover:text-indigo-700 dark:text-indigo-200 dark:hover:text-indigo-100"
-        >
+        <Button as="a" href={project.link} variant="ghost" className="gap-2">
           View project
           <span aria-hidden>→</span>
-        </a>
+        </Button>
       </div>
-    </article>
+    </Card>
   );
 }

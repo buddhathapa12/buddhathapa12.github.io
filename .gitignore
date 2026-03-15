@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Impeccable UI files
+.agents
+skills-lock.json
