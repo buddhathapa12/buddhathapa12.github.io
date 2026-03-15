@@ -137,14 +137,14 @@ export const profile: Profile = {
       name: "Multicamera Person Tracking",
       description:
         "Developed a multi-camera person tracking system leveraging YOLOv4, Kalman filtering, and Bhattacharya distance for robust re-identification.",
-      link: "#",
+      link: "https://github.com/locusbnk",
       tags: ["Computer Vision", "YOLOv4", "Kalman Filter"],
     },
     {
       name: "Road Accident Data Collection and Visualization System",
       description:
         "Built a Django-based platform for collecting and analyzing traffic accident data with K-means clustering.",
-      link: "#",
+      link: "https://github.com/buddhathapa12/Road-accident-data-collection-and-visualization-system",
       tags: ["Django", "Data Analysis", "Clustering"],
     },
     {
@@ -158,7 +158,7 @@ export const profile: Profile = {
       name: "LICT Personnel Management",
       description:
         "Delivered a Laravel-based personnel management system for HR workflows and reporting.",
-      link: "#",
+      link: "https://github.com/buddhathapa12/LictProject",
       tags: ["Laravel", "PHP", "Management"],
     },
     {

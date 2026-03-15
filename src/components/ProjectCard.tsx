@@ -27,7 +27,15 @@ export default function ProjectCard({ project }: { project: Project }) {
       </div>
 
       <div className="mt-6">
-        <Button as="a" href={project.link} variant="ghost" className="gap-2">
+        <Button
+          as="a"
+          href={project.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="View project (opens in new tab)"
+          variant="ghost"
+          className="gap-2"
+        >
           View project
           <span aria-hidden>→</span>
         </Button>

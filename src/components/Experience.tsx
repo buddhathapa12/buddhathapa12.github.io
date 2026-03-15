@@ -12,7 +12,7 @@ export default function Experience() {
           <div>
             <h2
               id="experience-heading"
-              className="text-2xl font-semibold text-slate-900 dark:text-slate-100"
+              className="text-2xl font-semibold text-slate-900 dark:text-slate-100 inline-block border-b-2 border-indigo-200/70 pb-2 dark:border-indigo-400/40"
             >
               Experience
             </h2>
