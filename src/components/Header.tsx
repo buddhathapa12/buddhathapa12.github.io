@@ -35,7 +35,12 @@ export default function Header({ theme, onToggleTheme }: HeaderProps) {
     <header className="sticky top-0 z-30 border-b border-slate-200 bg-white/80 backdrop-blur dark:border-slate-800 dark:bg-slate-950/60">
       <div className="mx-auto flex max-w-5xl items-center justify-between gap-4 px-6 py-4">
         <a
-          href="#about"
+          href="#"
+          onClick={(event) => {
+            event.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+            setIsOpen(false);
+          }}
           className="flex items-center gap-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
         >
           <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-indigo-500 via-fuchsia-500 to-emerald-500 text-sm font-semibold text-white shadow-sm">

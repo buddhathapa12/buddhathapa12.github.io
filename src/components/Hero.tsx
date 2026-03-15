@@ -8,7 +8,15 @@ export default function Hero() {
       aria-labelledby="hero-heading"
     >
       <div className="mx-auto max-w-5xl">
-        <div className="grid gap-10 lg:grid-cols-[1fr_360px] lg:items-start">
+        <div className="grid gap-10 lg:grid-cols-[0.8fr_1fr] lg:items-start">
+          <div className="flex items-start justify-center">
+            <img
+              src="/buddha_thapa_profile.jpg"
+              alt={`${profile.name} profile`}
+              className="h-85 w-80 rounded-3xl border-4 border-slate-200 object-cover shadow-lg dark:border-slate-800"
+              loading="lazy"
+            />
+          </div>
           <div>
             <h1
               id="hero-heading"
@@ -16,6 +24,9 @@ export default function Hero() {
             >
               Hi, I’m {profile.name}.
             </h1>
+            <p className="mt-3 text-base font-semibold text-slate-600 dark:text-slate-400">
+              {profile.title}
+            </p>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-600 dark:text-slate-300">
               {profile.about}
             </p>
@@ -34,43 +45,6 @@ export default function Hero() {
               </a>
             </div>
           </div>
-
-          <aside className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-            <p className="text-sm font-semibold text-slate-900 dark:text-slate-100">
-              Quick details
-            </p>
-            <dl className="mt-4 space-y-4 text-sm text-slate-600 dark:text-slate-300">
-              <div>
-                <dt className="font-medium text-slate-700 dark:text-slate-300">
-                  Role
-                </dt>
-                <dd className="mt-1 text-sm text-slate-900 dark:text-slate-100">
-                  {profile.title}
-                </dd>
-              </div>
-              <div>
-                <dt className="font-medium text-slate-700 dark:text-slate-300">
-                  Location
-                </dt>
-                <dd className="mt-1 text-sm text-slate-900 dark:text-slate-100">
-                  {profile.location}
-                </dd>
-              </div>
-              <div>
-                <dt className="font-medium text-slate-700 dark:text-slate-300">
-                  Email
-                </dt>
-                <dd className="mt-1">
-                  <a
-                    href={`mailto:${profile.email}`}
-                    className="text-slate-600 underline hover:text-slate-900 dark:text-slate-300 dark:hover:text-slate-100"
-                  >
-                    {profile.email}
-                  </a>
-                </dd>
-              </div>
-            </dl>
-          </aside>
         </div>
       </div>
     </section>
