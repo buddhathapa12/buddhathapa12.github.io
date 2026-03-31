@@ -8,7 +8,7 @@ export default function Hero() {
       className="scroll-mt-24 pt-10 pb-16 md:pt-16 md:pb-24 bg-gradient-to-br from-indigo-50 via-fuchsia-50 to-emerald-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-900"
       aria-labelledby="hero-heading"
     >
-      <div className="mx-auto max-w-5xl">
+      <div className="mx-auto max-w-5xl px-6 sm:px-8">
         <div className="grid gap-8 lg:gap-10 lg:grid-cols-10 lg:items-start">
           <div className="flex items-start justify-center lg:col-span-4">
             <img

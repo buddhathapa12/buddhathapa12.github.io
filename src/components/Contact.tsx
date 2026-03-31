@@ -19,7 +19,7 @@ export default function Contact() {
       className="scroll-mt-24 pt-16 pb-24"
       aria-labelledby="contact-heading"
     >
-      <div className="mx-auto max-w-5xl">
+      <div className="mx-auto max-w-5xl px-6 sm:px-8">
         <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
           <div>
             <h2
