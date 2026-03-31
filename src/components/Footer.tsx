@@ -2,10 +2,32 @@ import { profile } from "../data/profile";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-slate-200 bg-white/80 px-6 py-10 text-center text-sm text-slate-500 dark:border-slate-800 dark:bg-slate-950/60 dark:text-slate-400">
-      <p>
-        © {new Date().getFullYear()} {profile.name}
-      </p>
+    <footer className="border-t border-slate-200 bg-white/90 py-10 text-sm text-slate-500 backdrop-blur dark:border-slate-800 dark:bg-slate-950/90 dark:text-slate-400">
+      <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 sm:flex-row sm:items-center sm:justify-between">
+        <p>
+          © {new Date().getFullYear()} {profile.name}
+        </p>
+        <div className="flex flex-wrap items-center justify-center gap-4 text-slate-600 dark:text-slate-400">
+          <a
+            href="#about"
+            className="hover:text-slate-900 dark:hover:text-slate-100"
+          >
+            Home
+          </a>
+          <a
+            href="#projects"
+            className="hover:text-slate-900 dark:hover:text-slate-100"
+          >
+            Projects
+          </a>
+          <a
+            href="#contact"
+            className="hover:text-slate-900 dark:hover:text-slate-100"
+          >
+            Contact
+          </a>
+        </div>
+      </div>
     </footer>
   );
 }

@@ -4,13 +4,13 @@ import Card from "./ui/Card";
 
 export default function ProjectCard({ project }: { project: Project }) {
   return (
-    <Card className="group transition hover:-translate-y-1 hover:shadow-md">
-      <div className="flex items-start justify-between gap-4">
+    <Card className="group transition duration-300 hover:-translate-y-1 hover:shadow-2xl">
+      <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
         <div>
           <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100">
             {project.name}
           </h3>
-          <p className="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+          <p className="mt-3 max-w-xl text-sm leading-relaxed text-slate-600 dark:text-slate-300">
             {project.description}
           </p>
         </div>

@@ -1,26 +1,28 @@
 import { profile } from "../data/profile";
+import Card from "./ui/Card";
 
 export default function Skills() {
   return (
     <section
       id="skills"
-      className="scroll-mt-24 pt-16 pb-20"
+      className="scroll-mt-24 py-16"
       aria-labelledby="skills-heading"
     >
       <div className="mx-auto max-w-5xl px-6 sm:px-8">
-        <div className="flex flex-col gap-6">
-          <div>
-            <h2
-              id="skills-heading"
-              className="text-2xl font-semibold text-slate-900 dark:text-slate-100 inline-block border-b-2 border-indigo-200/70 pb-2 dark:border-indigo-400/40"
-            >
-              Skills
-            </h2>
-            <p className="mt-3 max-w-2xl text-sm text-slate-600 dark:text-slate-300">
-              Core tools and technologies I use to ship modern frontend
-              experiences.
-            </p>
-          </div>
+        <div className="mb-10">
+          <h2
+            id="skills-heading"
+            className="text-3xl font-semibold text-slate-900 dark:text-slate-100"
+          >
+            Skills
+          </h2>
+          <p className="mt-3 max-w-2xl text-sm text-slate-600 dark:text-slate-300">
+            Core tools and technologies I use to ship modern software and data
+            workflows.
+          </p>
+        </div>
+
+        <Card className="border-slate-200 dark:border-slate-800">
           <div className="flex flex-wrap gap-3">
             {profile.skills.map((skill) => (
               <span
@@ -31,7 +33,7 @@ export default function Skills() {
               </span>
             ))}
           </div>
-        </div>
+        </Card>
       </div>
     </section>
   );
