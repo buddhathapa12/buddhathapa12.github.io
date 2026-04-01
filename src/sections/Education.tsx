@@ -9,8 +9,8 @@ export default function Education(): React.ReactNode {
       className="scroll-mt-24 bg-slate-50 py-16 dark:bg-slate-950"
       aria-labelledby="education-heading"
     >
-      <div className="mx-auto max-w-5xl px-6 sm:px-8">
-        <div className="mb-10 flex items-center gap-3">
+      <div className="mb-8 space-y-4">
+        <div className="flex items-center gap-3">
           <GraduationCap className="h-6 w-6 text-slate-700 dark:text-slate-300" />
           <div>
             <p className="text-sm uppercase tracking-[0.3em] text-slate-500 dark:text-slate-400">

@@ -29,8 +29,8 @@ export default function AboutPosters(): React.ReactNode {
       aria-labelledby="posters-heading"
       className="scroll-mt-24 bg-slate-50 py-16 dark:bg-slate-950"
     >
-      <div className="mx-auto max-w-5xl px-6 sm:px-8">
-        <div className="mb-8 flex items-center gap-4">
+      <div className="mb-8 space-y-4">
+        <div className="flex items-center gap-3">
           <Monitor className="h-6 w-6 text-slate-700 dark:text-slate-300" />
           <div>
             <p className="text-sm uppercase tracking-[0.3em] text-slate-500 dark:text-slate-400">
