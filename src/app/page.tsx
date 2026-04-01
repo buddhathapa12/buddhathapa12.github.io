@@ -3,9 +3,9 @@ import Skills from "../sections/Skills";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Buddha Thapa | Bioinformatics Engineer",
+  title: "Buddha Thapa | Computational Biologist & Software Engineer",
   description:
-    "Buddha Thapa builds reproducible bioinformatics workflows and software systems for research-driven teams.",
+    "Buddha Thapa builds reproducible bioinformatics workflows and scalable software systems for research and engineering teams.",
 };
 
 export default function HomePage(): React.ReactNode {

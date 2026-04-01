@@ -38,8 +38,12 @@ export default function Contact(): React.ReactNode {
               <Button as="a" href={`mailto:${profile.email}`} variant="primary">
                 Email me
               </Button>
-              <Button as="a" href="/projects" variant="secondary">
-                Browse projects
+              <Button
+                as="a"
+                href={profile.cv ?? "/Buddha_Thapa_Magar_CV.pdf"}
+                variant="secondary"
+              >
+                Download CV
               </Button>
             </div>
           </div>
@@ -60,17 +64,6 @@ export default function Contact(): React.ReactNode {
                       className="text-slate-600 underline hover:text-slate-900 dark:text-slate-200"
                     >
                       {profile.email}
-                    </a>
-                  </div>
-                  <div className="flex items-center justify-between gap-3">
-                    <span className="font-medium text-slate-700 dark:text-slate-300">
-                      Phone
-                    </span>
-                    <a
-                      href={`tel:${profile.phone}`}
-                      className="text-slate-600 underline hover:text-slate-900 dark:text-slate-200"
-                    >
-                      {profile.phone}
                     </a>
                   </div>
                   <div className="flex items-center justify-between gap-3">
@@ -99,8 +92,62 @@ export default function Contact(): React.ReactNode {
                       {linkedinHandle}
                     </a>
                   </div>
+                  {profile.phone ? (
+                    <div className="flex items-center justify-between gap-3">
+                      <span className="font-medium text-slate-700 dark:text-slate-300">
+                        Phone
+                      </span>
+                      <a
+                        href={`tel:${profile.phone}`}
+                        className="text-slate-600 underline hover:text-slate-900 dark:text-slate-200"
+                      >
+                        {profile.phone}
+                      </a>
+                    </div>
+                  ) : null}
                 </div>
               </div>
+              {(profile.orcid ||
+                profile.googleScholar ||
+                profile.researchGate) && (
+                <div>
+                  <p className="text-xs uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">
+                    Academic profiles
+                  </p>
+                  <div className="mt-4 space-y-3">
+                    {profile.orcid ? (
+                      <a
+                        href={profile.orcid}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="block rounded-3xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-700 transition hover:border-slate-300 hover:bg-slate-100 dark:border-slate-800 dark:bg-slate-900/90 dark:text-slate-200 dark:hover:border-slate-700 dark:hover:bg-slate-800"
+                      >
+                        ORCID
+                      </a>
+                    ) : null}
+                    {profile.googleScholar ? (
+                      <a
+                        href={profile.googleScholar}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="block rounded-3xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-700 transition hover:border-slate-300 hover:bg-slate-100 dark:border-slate-800 dark:bg-slate-900/90 dark:text-slate-200 dark:hover:border-slate-700 dark:hover:bg-slate-800"
+                      >
+                        Google Scholar
+                      </a>
+                    ) : null}
+                    {profile.researchGate ? (
+                      <a
+                        href={profile.researchGate}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="block rounded-3xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-700 transition hover:border-slate-300 hover:bg-slate-100 dark:border-slate-800 dark:bg-slate-900/90 dark:text-slate-200 dark:hover:border-slate-700 dark:hover:bg-slate-800"
+                      >
+                        ResearchGate
+                      </a>
+                    ) : null}
+                  </div>
+                </div>
+              )}
             </div>
           </Card>
         </div>

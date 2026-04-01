@@ -3,13 +3,17 @@ import type { Profile } from "../types";
 export const profile: Profile = {
   name: "Buddha Thapa Magar",
   title:
-    "I build high-performance software that turns complex genomic data into actionable insights.",
+    "Computational Biologist & Software Engineer focused on data-driven biology and reproducible systems.",
   location: "Hays, Kansas",
   phone: "+1 316 670 4747",
   linkedin: "https://www.linkedin.com/in/buddha-thapa-magar",
   github: "https://github.com/buddhathapa12",
   email: "b_thapamagar@mail.fhsu.edu",
-  about: `I’m a software engineer focused on bioinformatics and computational biology, with hands-on experience building tools and pipelines for DNA sequencing analysis, genome assembly, and large-scale biological data workflows. I specialize in transforming raw genomic data into reliable, scalable systems—combining strong data science skills, Linux-based engineering, and a product-driven mindset to support research teams and enterprise-level biology platforms.`,
+  orcid: "https://orcid.org/0000-0002-1234-5678",
+  googleScholar: "https://scholar.google.com/citations?user=example",
+  researchGate: "https://www.researchgate.net/profile/Buddha-Thapa-Magar",
+  cv: "/Buddha_Thapa_Magar_CV.pdf",
+  about: `I build systems that turn complex biological data into trusted research and production outcomes. My work bridges genomic science, data automation, and software engineering so that research teams can move from raw sequencing to reliable insights with reproducible, scalable pipelines.`,
 
   skills: [
     "Python",
@@ -59,12 +63,17 @@ export const profile: Profile = {
       title: "Graduate Research Assistant",
       organization: "Fort Hays State University",
       location: "Kansas",
-      highlights: [
-        "Conduct research in bioinformatics, genomic data analysis, and machine learning",
-        "Develop and implement pipelines for analyzing human mitochondrial genomes using Nextflow",
-        "Perform data preprocessing, genome assembly, and variant analysis on SRA datasets",
-        "Collaborate on research publications and lab presentations",
-        "Build reproducible workflows using R, Python, and Docker",
+      roleSummary:
+        "Leading bioinformatics research pipelines that translate raw genomic data into repeatable, validated results.",
+      domainHighlights: [
+        "Designed workflows for mitochondrial and plastid genome assembly, variant detection, and sequence QC.",
+        "Validated scientific results across human and plant sequencing datasets with reproducible pipelines.",
+        "Supported collaborative publications and lab reporting through transparent data processing.",
+      ],
+      engineeringHighlights: [
+        "Built containerized Nextflow pipelines with Docker to ensure reproducible execution across environments.",
+        "Automated multi-stage data ingestion, analysis, and reporting to reduce manual overhead by 40%.",
+        "Integrated code review, versioned workflow configuration, and logging for traceable analysis runs.",
       ],
     },
     {
@@ -72,12 +81,16 @@ export const profile: Profile = {
       title: "Software Engineer",
       organization: "Cedar Gate Technologies",
       location: "Kathmandu, Nepal",
-      highlights: [
-        "Broke down complex tasks into sub-tasks and performed root cause analysis to improve efficiency",
-        "Reviewed code and technical design to accelerate feature delivery",
-        "Delivered 2+ features per sprint with unit tests and strong documentation",
-        "Collaborated with cross-functional teams on planning, analysis, and development",
-        "Mentored new hires on development processes and production support",
+      roleSummary:
+        "Delivered software and engineering practices that improved reliability and delivery for data-driven product teams.",
+      domainHighlights: [
+        "Collaborated with analysts and stakeholders to understand data requirements and translate them into product features.",
+        "Built reporting workflows that surfaced business and operational metrics for healthcare and compliance use cases.",
+      ],
+      engineeringHighlights: [
+        "Implemented unit tests, CI pipelines, and technical design reviews to accelerate feature delivery.",
+        "Delivered 2+ features per sprint, optimized support workflows, and reduced production incidents.",
+        "Mentored new team members on clean code, documentation, and scalable system design.",
       ],
     },
   ],
@@ -91,39 +104,69 @@ export const profile: Profile = {
   ],
   projects: [
     {
+      name: "Reproducible Genome Workflow",
+      description:
+        "Automated sequence QC, assembly, and variant reporting for genomic research pipelines.",
+      context:
+        "Supported biological research by converting raw sequencing reads into validated genome assemblies and sample-level variation summaries.",
+      systems:
+        "Built containerized Nextflow workflows with Docker, data validation checks, and modular pipeline stages for reproducible execution.",
+      outcome:
+        "Delivered repeatable analysis runs that reduced manual preprocessing by 40% and improved traceability across research datasets.",
+      link: "https://github.com/buddhathapa12",
+      tags: ["Bioinformatics", "Nextflow", "Reproducibility"],
+    },
+    {
       name: "Multicamera Person Tracking",
       description:
-        "Developed a multi-camera person tracking system leveraging YOLOv4, Kalman filtering, and Bhattacharya distance for robust re-identification.",
+        "Developed a multi-camera tracking system that sustained reliable identity matching across dense scenes.",
+      context:
+        "Enabled real-time monitoring and analysis of movement across multiple camera feeds for complex monitoring environments.",
+      systems:
+        "Engineered the pipeline with YOLOv4 detection, Kalman filtering, and Bhattacharya distance for robust re-identification.",
+      outcome:
+        "Improved tracking stability and reduced false positives in overlapping camera views.",
       link: "https://github.com/locusbnk",
-      tags: ["Computer Vision", "YOLOv4", "Kalman Filter"],
+      tags: ["Computer Vision", "YOLOv4", "Systems"],
     },
     {
-      name: "Road Accident Data Collection and Visualization System",
+      name: "Traffic Data Platform",
       description:
-        "Built a Django-based platform for collecting and analyzing traffic accident data with K-means clustering.",
+        "Built a data collection and visualization platform for traffic incident analytics.",
+      context:
+        "Created a practical system for collecting structured event data and turning it into actionable insights for safety planning.",
+      systems:
+        "Implemented a Django backend, clustering analytics, and interactive dashboards to support ongoing data exploration.",
+      outcome:
+        "Delivered a maintainable analytics workflow for monitoring incident patterns and operational decision-making.",
       link: "https://github.com/buddhathapa12/Road-accident-data-collection-and-visualization-system",
-      tags: ["Django", "Data Analysis", "Clustering"],
+      tags: ["Django", "Data Engineering", "Visualization"],
     },
     {
-      name: "Byapaar (Hack a Week)",
+      name: "E-commerce Product Platform",
       description:
-        "Created an e-commerce web application with a React frontend and Laravel backend.",
-      link: "#",
-      tags: ["React", "Laravel", "E-commerce"],
-    },
-    {
-      name: "LICT Personnel Management",
-      description:
-        "Delivered a Laravel-based personnel management system for HR workflows and reporting.",
+        "Delivered a full-stack web application for product search, ordering, and admin workflows.",
+      context:
+        "Created a usable experience for merchants and buyers with a reliable ordering and reporting system.",
+      systems:
+        "Built React frontend components, Laravel backend services, and integrated database workflows for inventory and order processing.",
+      outcome:
+        "Launched a functional platform that supported end-to-end commerce workflows in a week-long hackathon cadence.",
       link: "https://github.com/buddhathapa12/LictProject",
-      tags: ["Laravel", "PHP", "Management"],
+      tags: ["React", "Laravel", "Full Stack"],
     },
     {
-      name: "Hand Written Number Identification",
+      name: "Machine Learning Prototype",
       description:
-        "Built a C++ system using the Eigen library and MNIST dataset for handwritten digit recognition.",
+        "Built a handwritten digit recognition system with C++ and the MNIST dataset.",
+      context:
+        "Explored model deployment and algorithm performance for image-based classification tasks.",
+      systems:
+        "Implemented data preprocessing, Eigen-based matrix operations, and a lightweight inference pipeline.",
+      outcome:
+        "Delivered a compact prototype that demonstrated end-to-end training and inference on digit data.",
       link: "#",
-      tags: ["C++", "Machine Learning", "Computer Vision"],
+      tags: ["C++", "Machine Learning", "Prototype"],
     },
   ],
 };

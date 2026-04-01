@@ -6,6 +6,9 @@ export type NavLink = {
 export type Project = {
   name: string;
   description: string;
+  context: string;
+  systems: string;
+  outcome?: string;
   link: string;
   tags: string[];
 };
@@ -23,7 +26,9 @@ export type ExperienceItem = {
   title: string;
   organization: string;
   location?: string;
-  highlights: string[];
+  roleSummary: string;
+  domainHighlights: string[];
+  engineeringHighlights: string[];
 };
 
 export type Publication = {
@@ -40,6 +45,10 @@ export type Profile = {
   linkedin: string;
   github: string;
   email: string;
+  cv?: string;
+  orcid?: string;
+  googleScholar?: string;
+  researchGate?: string;
   about: string;
   skills: string[];
   education: EducationItem[];

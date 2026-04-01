@@ -41,9 +41,10 @@ export default function Header(): React.ReactNode {
 
         <nav className="hidden items-center gap-2 text-sm font-medium md:flex">
           {pageLinks.map((link) => {
+            const linkBase = link.href.split("#")[0];
             const isActive =
-              pathname === link.href ||
-              (link.href !== "/" && pathname?.startsWith(link.href));
+              pathname === linkBase ||
+              (linkBase !== "/" && pathname?.startsWith(linkBase));
             return (
               <Link
                 key={link.href}
@@ -90,9 +91,10 @@ export default function Header(): React.ReactNode {
         <div className="border-t border-slate-200 bg-white/95 px-6 py-4 backdrop-blur dark:border-slate-800 dark:bg-slate-950/95 md:hidden">
           <div className="flex flex-col gap-3">
             {pageLinks.map((link) => {
+              const linkBase = link.href.split("#")[0];
               const isActive =
-                pathname === link.href ||
-                (link.href !== "/" && pathname?.startsWith(link.href));
+                pathname === linkBase ||
+                (linkBase !== "/" && pathname?.startsWith(linkBase));
               return (
                 <Link
                   key={link.href}

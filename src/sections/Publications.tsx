@@ -1,3 +1,4 @@
+import { BookOpen } from "lucide-react";
 import { profile } from "../data/profile";
 import Card from "../components/ui/Card";
 
@@ -9,17 +10,23 @@ export default function Publications(): React.ReactNode {
       aria-labelledby="publications-heading"
     >
       <div className="mx-auto max-w-5xl px-6 sm:px-8">
-        <div className="mb-10">
-          <h2
-            id="publications-heading"
-            className="text-3xl font-semibold text-slate-900 dark:text-slate-100"
-          >
-            Publications
-          </h2>
-          <p className="mt-3 max-w-2xl text-sm text-slate-600 dark:text-slate-300">
-            Selected peer-reviewed work.
-          </p>
+        <div className="mb-10 flex items-center gap-3">
+          <BookOpen className="h-6 w-6 text-slate-700 dark:text-slate-300" />
+          <div>
+            <p className="text-sm uppercase tracking-[0.3em] text-slate-500 dark:text-slate-400">
+              Publications
+            </p>
+            <h2
+              id="publications-heading"
+              className="text-3xl font-semibold text-slate-900 dark:text-slate-100"
+            >
+              Selected scientific contributions
+            </h2>
+          </div>
         </div>
+        <p className="mb-8 max-w-2xl text-sm text-slate-600 dark:text-slate-300">
+          Concise examples of interdisciplinary research and analysis.
+        </p>
 
         <div className="space-y-6">
           {profile.publications.map((pub) => (
@@ -38,7 +45,7 @@ export default function Publications(): React.ReactNode {
                       href={pub.link}
                       target="_blank"
                       rel="noreferrer"
-                      className="font-semibold text-indigo-600 hover:text-indigo-700 dark:text-indigo-200 dark:hover:text-indigo-100"
+                      className="inline-flex items-center rounded-full border border-slate-200 bg-white px-3 py-1 text-sm font-semibold text-indigo-600 transition duration-200 hover:border-slate-300 hover:bg-slate-50 hover:text-indigo-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 dark:border-slate-800 dark:bg-slate-950 dark:text-indigo-200 dark:hover:border-slate-700 dark:hover:bg-slate-900 dark:hover:text-indigo-100"
                     >
                       View
                     </a>

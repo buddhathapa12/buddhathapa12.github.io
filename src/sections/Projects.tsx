@@ -9,7 +9,7 @@ export default function Projects(): React.ReactNode {
       className="scroll-mt-24 py-16"
       aria-labelledby="projects-heading"
     >
-      <div className="mx-auto max-w-5xl px-6 sm:px-8">
+      <div className="mx-auto max-w-6xl px-6 sm:px-8">
         <div className="flex flex-col gap-6">
           <div>
             <h2
@@ -19,8 +19,8 @@ export default function Projects(): React.ReactNode {
               Selected projects
             </h2>
             <p className="mt-3 max-w-2xl text-sm text-slate-600 dark:text-slate-300">
-              A curated selection of recent work that highlights technical
-              craftsmanship and UX focus.
+              Projects that connect biological research and engineering systems,
+              with clear domain context and reproducible implementation.
             </p>
           </div>
 

@@ -16,13 +16,13 @@ export default function Hero(): React.ReactNode {
         <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
           <div className="rounded-[1.5rem] border border-slate-200 bg-white p-8 shadow-sm dark:border-slate-800 dark:bg-slate-950/95">
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500 dark:text-slate-400">
-              Bioinformatics engineering
+              Computational Biology + Software Systems
             </p>
             <h1
               id="hero-heading"
               className="mt-4 text-4xl font-semibold tracking-tight text-slate-900 dark:text-slate-100 sm:text-5xl"
             >
-              Hi, I’m {profile.name}.
+              Computational Biologist &amp; Software Engineer
             </h1>
             <p className="mt-4 text-base font-medium text-slate-700 dark:text-slate-300">
               {profile.title}
@@ -34,30 +34,80 @@ export default function Hero(): React.ReactNode {
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
               <div className="rounded-3xl border border-slate-200 bg-slate-50 p-4 text-sm dark:border-slate-800 dark:bg-slate-900/90">
                 <p className="font-semibold text-slate-900 dark:text-slate-100">
-                  Research-driven workflows
+                  Data-driven biology
                 </p>
                 <p className="mt-2 text-slate-600 dark:text-slate-400">
-                  Data pipelines, genome assembly, and reproducible analysis.
+                  Reproducible pipelines and validated workflows for biological
+                  data.
                 </p>
               </div>
               <div className="rounded-3xl border border-slate-200 bg-slate-50 p-4 text-sm dark:border-slate-800 dark:bg-slate-900/90">
                 <p className="font-semibold text-slate-900 dark:text-slate-100">
-                  Product-focused delivery
+                  Scalable software systems
                 </p>
                 <p className="mt-2 text-slate-600 dark:text-slate-400">
-                  Building software that scales for research teams and
-                  enterprise systems.
+                  Engineering resilient services and automation for science and
+                  product teams.
                 </p>
               </div>
             </div>
 
             <div className="mt-8 flex flex-wrap gap-3">
-              <Button as="a" href="/contact" variant="primary">
-                Talk about a project
+              <Button as="a" href="/about" variant="primary">
+                About my approach
               </Button>
               <Button as="a" href="/projects" variant="secondary">
                 View projects
               </Button>
+            </div>
+
+            <div className="mt-6 grid gap-3 sm:grid-cols-2">
+              <a
+                href="/experience"
+                className="rounded-3xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 transition hover:bg-slate-100 dark:border-slate-800 dark:bg-slate-900/90 dark:text-slate-100"
+              >
+                Experience
+              </a>
+              <a
+                href="/education"
+                className="rounded-3xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 transition hover:bg-slate-100 dark:border-slate-800 dark:bg-slate-900/90 dark:text-slate-100"
+              >
+                Education
+              </a>
+            </div>
+
+            <div className="mt-8 grid gap-3 sm:grid-cols-2">
+              <a
+                href="/contact"
+                className="rounded-3xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 transition hover:bg-slate-100 dark:border-slate-800 dark:bg-slate-900/90 dark:text-slate-100"
+              >
+                Contact
+              </a>
+              <a
+                href="/Buddha_Thapa_Magar_CV.pdf"
+                className="rounded-3xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 transition hover:bg-slate-100 dark:border-slate-800 dark:bg-slate-900/90 dark:text-slate-100"
+              >
+                Download CV
+              </a>
+            </div>
+
+            <div className="mt-6 flex flex-wrap gap-3 text-sm">
+              <a
+                href={profile.github}
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-full border border-slate-200 bg-white px-4 py-2 text-slate-900 transition hover:bg-slate-100 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-100"
+              >
+                GitHub
+              </a>
+              <a
+                href={profile.linkedin}
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-full border border-slate-200 bg-white px-4 py-2 text-slate-900 transition hover:bg-slate-100 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-100"
+              >
+                LinkedIn
+              </a>
             </div>
           </div>
 
