@@ -1,7 +1,7 @@
 import { profile } from "../data/profile";
 import Card from "../components/ui/Card";
 
-export default function Skills() {
+export default function Skills(): React.ReactNode {
   return (
     <section
       id="skills"

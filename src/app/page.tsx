@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     "Buddha Thapa builds reproducible bioinformatics workflows and software systems for research-driven teams.",
 };
 
-export default function HomePage() {
+export default function HomePage(): React.ReactNode {
   return (
     <main className="pb-10 sm:pb-14">
       <Hero />

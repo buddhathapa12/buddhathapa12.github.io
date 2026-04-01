@@ -1,4 +1,4 @@
-export default function SkipLink() {
+export default function SkipLink(): React.ReactNode {
   return (
     <a
       href="#main-content"

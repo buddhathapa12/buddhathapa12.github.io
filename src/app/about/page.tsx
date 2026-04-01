@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     "Learn more about Buddha Thapa's bioinformatics and software systems experience.",
 };
 
-export default function AboutPage() {
+export default function AboutPage(): React.ReactNode {
   return (
     <main className="py-10 sm:py-14">
       <About />

@@ -2,7 +2,11 @@ import Link from "next/link";
 import Card from "./ui/Card";
 import type { BlogPostSummary } from "../lib/blog";
 
-export default function BlogCard({ post }: { post: BlogPostSummary }) {
+type BlogCardProps = {
+  post: BlogPostSummary;
+};
+
+export default function BlogCard({ post }: BlogCardProps): React.ReactNode {
   return (
     <Card className="group border-slate-200 transition duration-200 hover:-translate-y-1 hover:shadow-lg dark:border-slate-800">
       <div className="flex flex-col gap-4">

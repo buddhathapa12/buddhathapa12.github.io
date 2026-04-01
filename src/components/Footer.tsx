@@ -2,7 +2,7 @@ import Link from "next/link";
 import { pageLinks } from "../data/page-links";
 import { profile } from "../data/profile";
 
-export default function Footer() {
+export default function Footer(): React.ReactNode {
   return (
     <footer className="border-t border-slate-200 bg-white/95 py-10 text-sm text-slate-500 backdrop-blur dark:border-slate-800 dark:bg-slate-950/95 dark:text-slate-400">
       <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 sm:flex-row sm:items-center sm:justify-between">

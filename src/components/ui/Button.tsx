@@ -42,7 +42,7 @@ export default function Button({
   className = "",
   children,
   ...props
-}: ButtonProps) {
+}: ButtonProps): React.ReactNode {
   const classNames = [variantStyles[variant], className]
     .filter(Boolean)
     .join(" ");

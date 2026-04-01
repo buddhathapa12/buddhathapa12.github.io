@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import { getBlogPostBySlug, getAllPosts } from "../../../lib/blog";
 import type { Metadata } from "next";
 
-export async function generateStaticParams() {
+export async function generateStaticParams(): Promise<Array<{ slug: string }>> {
   const posts = getAllPosts();
   return posts.map((post) => ({ slug: post.slug }));
 }
@@ -37,7 +37,7 @@ export default async function BlogPostPage({
   params,
 }: {
   params: { slug: string };
-}) {
+}): Promise<React.ReactNode> {
   const post = await getBlogPostBySlug(params.slug);
 
   if (!post) {

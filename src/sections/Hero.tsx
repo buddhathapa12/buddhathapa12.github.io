@@ -2,7 +2,7 @@ import Image from "next/image";
 import { profile } from "../data/profile";
 import Button from "../components/ui/Button";
 
-export default function Hero() {
+export default function Hero(): React.ReactNode {
   return (
     <section
       id="hero"

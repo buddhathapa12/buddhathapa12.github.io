@@ -2,7 +2,7 @@ import { Suspense } from "react";
 import { profile } from "../data/profile";
 import ProjectCard from "../components/ProjectCard";
 
-export default function Projects() {
+export default function Projects(): React.ReactNode {
   return (
     <section
       id="projects"

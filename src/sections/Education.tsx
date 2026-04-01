@@ -1,7 +1,7 @@
 import { profile } from "../data/profile";
 import Card from "../components/ui/Card";
 
-export default function Education() {
+export default function Education(): React.ReactNode {
   return (
     <section
       id="education"

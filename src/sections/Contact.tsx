@@ -10,7 +10,7 @@ function getHandleFromUrl(url: string) {
   }
 }
 
-export default function Contact() {
+export default function Contact(): React.ReactNode {
   const githubHandle = getHandleFromUrl(profile.github);
   const linkedinHandle = getHandleFromUrl(profile.linkedin);
 

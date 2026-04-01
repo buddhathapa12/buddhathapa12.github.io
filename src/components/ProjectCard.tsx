@@ -2,7 +2,13 @@ import type { Project } from "../types";
 import Button from "./ui/Button";
 import Card from "./ui/Card";
 
-export default function ProjectCard({ project }: { project: Project }) {
+type ProjectCardProps = {
+  project: Project;
+};
+
+export default function ProjectCard({
+  project,
+}: ProjectCardProps): React.ReactNode {
   return (
     <Card className="group transition duration-200 hover:shadow-md">
       <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">

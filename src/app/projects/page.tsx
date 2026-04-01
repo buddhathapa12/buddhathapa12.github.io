@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     "Browse selected projects that showcase software engineering, data workflows, and bioinformatics solutions.",
 };
 
-export default function ProjectsPage() {
+export default function ProjectsPage(): React.ReactNode {
   return (
     <main className="py-10 sm:py-14">
       <Projects />

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     "Get in touch with Buddha Thapa for bioinformatics, software, and data workflow projects.",
 };
 
-export default function ContactPage() {
+export default function ContactPage(): React.ReactNode {
   return (
     <main className="py-10 sm:py-14">
       <Contact />

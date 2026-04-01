@@ -22,11 +22,11 @@ function getPreferredTheme(): ThemeMode {
     : "light";
 }
 
-function applyTheme(theme: ThemeMode) {
+function applyTheme(theme: ThemeMode): void {
   document.documentElement.classList.toggle("dark", theme === "dark");
 }
 
-export default function ThemeToggle() {
+export default function ThemeToggle(): React.ReactNode {
   const [theme, setTheme] = useState<ThemeMode>(() => {
     if (typeof window === "undefined") {
       return "light";

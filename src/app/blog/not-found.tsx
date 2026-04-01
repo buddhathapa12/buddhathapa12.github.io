@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function BlogPostNotFound() {
+export default function BlogPostNotFound(): React.ReactNode {
   return (
     <main className="flex min-h-[60vh] flex-col items-center justify-center px-6 py-20 text-center">
       <p className="text-sm uppercase tracking-[0.3em] text-slate-500 dark:text-slate-400">

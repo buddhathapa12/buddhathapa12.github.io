@@ -7,7 +7,7 @@ import { profile } from "../data/profile";
 import { pageLinks } from "../data/page-links";
 import ThemeToggle from "./ThemeToggle";
 
-export default function Header() {
+export default function Header(): React.ReactNode {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
 

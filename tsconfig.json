@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "ES2023",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "es2023"
-    ],
+    "lib": ["dom", "dom.iterable", "es2023"],
     "allowJs": false,
     "skipLibCheck": true,
     "strict": true,
@@ -18,9 +14,6 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "types": [
-      "node"
-    ],
     "plugins": [
       {
         "name": "next"
@@ -34,10 +27,5 @@
     "src/**/*.tsx",
     "docs/types/**/*.ts"
   ],
-  "exclude": [
-    "node_modules",
-    "vite.config.ts",
-    ".next",
-    "docs"
-  ]
+  "exclude": ["node_modules", "vite.config.ts", ".next", "docs"]
 }

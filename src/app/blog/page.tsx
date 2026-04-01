@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     "Read articles about bioinformatics, software systems, and reproducible data workflows.",
 };
 
-export default async function BlogPage() {
+export default async function BlogPage(): Promise<React.ReactNode> {
   const posts = getAllPosts();
 
   return (

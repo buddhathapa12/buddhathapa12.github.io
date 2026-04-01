@@ -20,7 +20,7 @@ export default function Card({
   children,
   variant = "default",
   ...props
-}: CardProps) {
+}: CardProps): React.ReactNode {
   return (
     <div className={`${variantStyles[variant]} ${className}`} {...props}>
       {children}

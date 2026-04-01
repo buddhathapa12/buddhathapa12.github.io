@@ -1,7 +1,7 @@
 import { profile } from "../data/profile";
 import Card from "../components/ui/Card";
 
-export default function Publications() {
+export default function Publications(): React.ReactNode {
   return (
     <section
       id="publications"
