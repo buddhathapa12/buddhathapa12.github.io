@@ -1,66 +1,72 @@
-name: CI / Deploy
+name: CI / Build / Deploy on Release Tag
 
 on:
   push:
-    branches:
-      - main
+    tags:
+      - "v*.*.*" # v1.0.0, v1.2.3, etc.
   workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "github-pages"
+  cancel-in-progress: true
 
 jobs:
   lint:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: 20
+          cache: npm
 
-      - name: Install dependencies
-        run: npm install
-
-      - name: Run ESLint
-        run: npm run lint
+      - run: npm ci
+      - run: npm run lint
 
   build:
     needs: lint
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: 20
+          cache: npm
 
-      - name: Install dependencies
-        run: npm install
+      - run: npm ci
 
-      - name: Build
+      - name: Build Next.js (static export)
         run: npm run build
 
-      - name: Validate build output
+      - name: Validate export output
         run: |
-          if [ ! -d "./docs" ]; then
-            echo "ERROR: expected ./docs folder after build, but it does not exist." >&2
+          if [ ! -d "./out" ]; then
+            echo "ERROR: expected ./out folder after build" >&2
             exit 1
           fi
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: out
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
-    if: github.event_name == 'push'
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
-      - name: Deploy to gh-pages branch
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs
-          publish_branch: gh-pages
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
