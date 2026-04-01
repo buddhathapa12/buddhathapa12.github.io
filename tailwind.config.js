@@ -2,12 +2,12 @@
 export default {
   darkMode: "class",
   content: [
-    "./app/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
-    "./sections/**/*.{js,ts,jsx,tsx}",
-    "./lib/**/*.{js,ts,jsx,tsx}",
-    "./data/**/*.{js,ts,jsx,tsx}",
-    "./content/**/*.{md,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx}",
+    "./src/components/**/*.{js,ts,jsx,tsx}",
+    "./src/sections/**/*.{js,ts,jsx,tsx}",
+    "./src/lib/**/*.{js,ts,jsx,tsx}",
+    "./src/data/**/*.{js,ts,jsx,tsx}",
+    "./src/content/**/*.{md,mdx}",
   ],
   theme: {
     extend: {},

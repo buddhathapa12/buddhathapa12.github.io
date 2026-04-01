@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: CI / Deploy
 
 on:
   push:
@@ -53,6 +53,7 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    if: github.event_name == 'push'
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
