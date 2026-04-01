@@ -1,6 +1,6 @@
-import type { NavItem } from "./navigation";
+import type { NavLink } from "../types";
 
-export const pageLinks: NavItem[] = [
+export const pageLinks: NavLink[] = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/experience", label: "Experience" },

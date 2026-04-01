@@ -14,7 +14,7 @@ export default function Footer() {
             <Link
               key={item.href}
               href={item.href}
-              className="transition hover:text-slate-900 dark:hover:text-slate-100"
+              className="rounded-full px-2 py-2 transition duration-200 ease-out transform focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900 md:hover:-translate-y-0.5 md:hover:bg-slate-100 md:hover:text-slate-900 md:hover:underline dark:md:hover:bg-slate-800 dark:md:hover:text-slate-100 active:scale-[0.995] active:bg-slate-100 dark:active:bg-slate-800"
             >
               {item.label}
             </Link>

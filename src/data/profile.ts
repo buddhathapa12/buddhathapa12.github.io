@@ -1,47 +1,4 @@
-export type Project = {
-  name: string;
-  description: string;
-  link: string;
-  tags: string[];
-};
-
-export type Education = {
-  dates: string;
-  institution: string;
-  degree: string;
-  location?: string;
-  highlights: string[];
-};
-
-export type Experience = {
-  dates: string;
-  title: string;
-  organization: string;
-  location?: string;
-  highlights: string[];
-};
-
-export type Publication = {
-  year: string;
-  citation: string;
-  link?: string;
-};
-
-export type Profile = {
-  name: string;
-  title: string;
-  location: string;
-  phone: string;
-  linkedin: string;
-  github: string;
-  email: string;
-  about: string;
-  skills: string[];
-  education: Education[];
-  experience: Experience[];
-  publications: Publication[];
-  projects: Project[];
-};
+import type { Profile } from "../types";
 
 export const profile: Profile = {
   name: "Buddha Thapa Magar",

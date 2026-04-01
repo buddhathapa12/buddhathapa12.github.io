@@ -1,4 +1,4 @@
-import type { Project } from "../data/profile";
+import type { Project } from "../types";
 import Button from "./ui/Button";
 import Card from "./ui/Card";
 

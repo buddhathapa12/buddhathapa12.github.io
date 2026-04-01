@@ -1,4 +1,3 @@
-export type NavItem = {
-  href: string;
-  label: string;
-};
+import type { NavLink } from "../types";
+
+export type { NavLink };

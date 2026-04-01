@@ -48,10 +48,10 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`rounded-full px-3 py-2 transition ${
+                className={`rounded-full px-3 py-2 transition duration-200 ease-out transform focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900 ${
                   isActive
-                    ? "text-slate-900 dark:text-slate-100 font-semibold"
-                    : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100"
+                    ? "bg-slate-100 text-slate-900 font-semibold dark:bg-slate-800 dark:text-slate-100"
+                    : "text-slate-600 dark:text-slate-400 md:hover:-translate-y-0.5 md:hover:bg-slate-100 md:hover:text-slate-900 dark:md:hover:bg-slate-800 dark:md:hover:text-slate-100 active:translate-y-0 active:scale-[0.995] active:bg-slate-200 dark:active:bg-slate-800"
                 }`}
               >
                 {link.label}
@@ -98,10 +98,10 @@ export default function Header() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className={`rounded-2xl px-3 py-3 text-sm font-medium transition ${
+                  className={`rounded-2xl px-3 py-3 text-sm font-medium min-h-[44px] transition duration-200 ease-out transform focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900 ${
                     isActive
-                      ? "text-slate-900 dark:text-slate-100"
-                      : "text-slate-700 dark:text-slate-200 hover:text-slate-900 dark:hover:text-slate-100"
+                      ? "bg-slate-100 text-slate-900 dark:bg-slate-800 dark:text-slate-100"
+                      : "text-slate-700 dark:text-slate-200 active:scale-[0.995] active:bg-slate-100 active:text-slate-900 dark:active:bg-slate-800 dark:active:text-slate-100"
                   }`}
                 >
                   {link.label}
