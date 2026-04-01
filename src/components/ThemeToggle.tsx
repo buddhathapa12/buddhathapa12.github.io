@@ -5,7 +5,9 @@ import { Moon, Sun } from "lucide-react";
 
 const storageKey = "theme";
 
-function getPreferredTheme() {
+type ThemeMode = "light" | "dark";
+
+function getPreferredTheme(): ThemeMode {
   if (typeof window === "undefined") {
     return "light";
   }
@@ -20,67 +22,59 @@ function getPreferredTheme() {
     : "light";
 }
 
-function applyTheme(theme: "light" | "dark") {
+function applyTheme(theme: ThemeMode) {
   document.documentElement.classList.toggle("dark", theme === "dark");
 }
 
 export default function ThemeToggle() {
-  const [theme, setTheme] = useState<"light" | "dark">(() =>
-    getPreferredTheme(),
-  );
+  const [theme, setTheme] = useState<ThemeMode>(() => {
+    if (typeof window === "undefined") {
+      return "light";
+    }
+    return getPreferredTheme();
+  });
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    const timer = window.setTimeout(() => {
+      setMounted(true);
+    }, 0);
+
+    return () => window.clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    if (!mounted) {
+      return;
+    }
+
     applyTheme(theme);
-  }, [theme]);
+    window.localStorage.setItem(storageKey, theme);
+  }, [mounted, theme]);
 
   const handleToggle = () => {
-    const nextTheme = theme === "dark" ? "light" : "dark";
+    const nextTheme: ThemeMode = theme === "dark" ? "light" : "dark";
     setTheme(nextTheme);
-    window.localStorage.setItem(storageKey, nextTheme);
   };
 
+  const isDark = mounted ? theme === "dark" : false;
+
   return (
-    // <button
-    //   type="button"
-    //   onClick={handleToggle}
-    //   role="switch"
-    //   aria-checked={theme === "dark"}
-    //   className="relative inline-flex h-11 w-20 items-center rounded-full border border-slate-300 bg-slate-100 p-1 text-slate-900 transition duration-200 hover:border-slate-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100"
-    // >
-    //   <span className="sr-only">Toggle dark mode</span>
-    //   <span
-    //     className={`relative inline-flex h-9 w-9 items-center justify-center rounded-full bg-white shadow-sm transition-transform duration-200 ${
-    //       theme === "dark" ? "translate-x-9" : "translate-x-0"
-    //     }`}
-    //   >
-    //     {theme === "dark" ? <Moon size={16} /> : <Sun size={16} />}
-    //   </span>
-    // </button>
     <button
       type="button"
       onClick={handleToggle}
       role="switch"
-      aria-checked={theme === "dark"}
-      className="
-    relative inline-flex h-8 w-14 items-center rounded-full
-    border border-slate-300 bg-slate-100 p-0.5
-    transition-colors duration-200
-    hover:border-slate-400
-    focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900
-    dark:border-slate-600 dark:bg-slate-800
-  "
+      aria-checked={isDark}
+      className="relative inline-flex h-8 w-14 items-center rounded-full border border-slate-300 bg-slate-100 p-0.5 transition-colors duration-200 hover:border-slate-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900 dark:border-slate-600 dark:bg-slate-800"
     >
       <span className="sr-only">Toggle dark mode</span>
 
       <span
-        className={`
-      inline-flex h-7 w-7 items-center justify-center rounded-full
-      bg-white shadow-sm transition-transform duration-200
-      dark:bg-slate-900
-      ${theme === "dark" ? "translate-x-6" : "translate-x-0"}
-    `}
+        className={`inline-flex h-7 w-7 items-center justify-center rounded-full bg-white shadow-sm transition-transform duration-200 dark:bg-slate-900 ${
+          isDark ? "translate-x-6" : "translate-x-0"
+        }`}
       >
-        {theme === "dark" ? (
+        {isDark ? (
           <Moon size={14} className="text-slate-200" />
         ) : (
           <Sun size={14} className="text-amber-500" />

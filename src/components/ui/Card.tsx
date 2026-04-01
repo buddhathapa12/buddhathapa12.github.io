@@ -7,10 +7,12 @@ type CardProps = HTMLAttributes<HTMLDivElement> & {
   variant?: CardVariant;
 };
 
+const baseCardStyles =
+  "rounded-[1.5rem] border bg-white p-6 shadow-sm transition duration-200 will-change-transform will-change-opacity focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900 dark:bg-slate-950";
+
 const variantStyles: Record<CardVariant, string> = {
-  default:
-    "rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-sm transition duration-200 hover:shadow-md dark:border-slate-800 dark:bg-slate-950",
-  soft: "rounded-[1.5rem] border border-slate-200/80 bg-slate-50 p-6 shadow-sm dark:border-slate-800/80 dark:bg-slate-950/80",
+  default: `${baseCardStyles} border-slate-200 bg-white hover:-translate-y-1 hover:shadow-lg dark:border-slate-800`,
+  soft: `${baseCardStyles} border-slate-200/80 bg-slate-50 hover:-translate-y-0.5 dark:border-slate-800/80 dark:bg-slate-950/80`,
 };
 
 export default function Card({

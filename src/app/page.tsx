@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   return (
-    <main className="py-10 sm:py-14">
+    <main className="pb-10 sm:pb-14">
       <Hero />
       <Skills />
     </main>

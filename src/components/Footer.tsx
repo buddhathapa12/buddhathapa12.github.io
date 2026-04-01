@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { navItems } from "../data/navigation";
+import { pageLinks } from "../data/page-links";
 import { profile } from "../data/profile";
 
 export default function Footer() {
@@ -10,7 +10,7 @@ export default function Footer() {
           © {new Date().getFullYear()} {profile.name}
         </p>
         <div className="flex flex-wrap items-center justify-center gap-4 text-slate-600 dark:text-slate-400">
-          {navItems.slice(0, 4).map((item) => (
+          {pageLinks.slice(0, 4).map((item) => (
             <Link
               key={item.href}
               href={item.href}

@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { profile } from "../data/profile";
-import { navItems } from "../data/navigation";
+import { pageLinks } from "../data/page-links";
 import ThemeToggle from "./ThemeToggle";
 
 export default function Header() {
@@ -40,7 +40,7 @@ export default function Header() {
         </Link>
 
         <nav className="hidden items-center gap-2 text-sm font-medium md:flex">
-          {navItems.map((link) => {
+          {pageLinks.map((link) => {
             const isActive =
               pathname === link.href ||
               (link.href !== "/" && pathname?.startsWith(link.href));
@@ -89,7 +89,7 @@ export default function Header() {
       {isOpen ? (
         <div className="border-t border-slate-200 bg-white/95 px-6 py-4 backdrop-blur dark:border-slate-800 dark:bg-slate-950/95 md:hidden">
           <div className="flex flex-col gap-3">
-            {navItems.map((link) => {
+            {pageLinks.map((link) => {
               const isActive =
                 pathname === link.href ||
                 (link.href !== "/" && pathname?.startsWith(link.href));

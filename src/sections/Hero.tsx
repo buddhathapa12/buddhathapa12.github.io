@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Image from "next/image";
 import { profile } from "../data/profile";
 import Button from "../components/ui/Button";
 
@@ -62,11 +62,13 @@ export default function Hero() {
           </div>
 
           <div className="rounded-[1.5rem] border border-slate-200 bg-white p-4 shadow-sm dark:border-slate-800 dark:bg-slate-950/95">
-            <img
+            <Image
               src="/buddha_thapa_profile.jpg"
               alt={`${profile.name} profile`}
+              width={720}
+              height={720}
               className="h-full w-full rounded-[1.25rem] object-cover"
-              loading="lazy"
+              priority={false}
             />
           </div>
         </div>

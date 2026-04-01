@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { profile } from "../data/profile";
 import Button from "../components/ui/Button";
 import Card from "../components/ui/Card";
