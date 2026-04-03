@@ -10,7 +10,9 @@ export const metadata: Metadata = {
 export default function ExperiencePage(): React.ReactNode {
   return (
     <main className="py-10 sm:py-14">
-      <Experience />
+      <div className="mx-auto max-w-6xl px-6 sm:px-8">
+        <Experience />
+      </div>
     </main>
   );
 }

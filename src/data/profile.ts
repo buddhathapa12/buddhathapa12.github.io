@@ -13,7 +13,7 @@ export const profile: Profile = {
   googleScholar: "https://scholar.google.com/citations?user=example",
   researchGate: "https://www.researchgate.net/profile/Buddha-Thapa-Magar",
   cv: "/Buddha_Thapa_Magar_CV.pdf",
-  about: `I build systems that turn complex biological data into trusted research and production outcomes. My work bridges genomic science, data automation, and software engineering so that research teams can move from raw sequencing to reliable insights with reproducible, scalable pipelines.`,
+  about: `I build systems that turn complex biological data into trusted outcomes. Bridging genomic science, data automation, and software engineering for reproducible, scalable pipelines.`,
 
   skills: [
     "Python",
@@ -64,16 +64,14 @@ export const profile: Profile = {
       organization: "Fort Hays State University",
       location: "Kansas",
       roleSummary:
-        "Leading bioinformatics research pipelines that translate raw genomic data into repeatable, validated results.",
+        "Leading bioinformatics research pipelines for genomic data analysis and validation.",
       domainHighlights: [
-        "Designed workflows for mitochondrial and plastid genome assembly, variant detection, and sequence QC.",
-        "Validated scientific results across human and plant sequencing datasets with reproducible pipelines.",
-        "Supported collaborative publications and lab reporting through transparent data processing.",
+        "Designed workflows for genome assembly, variant detection, and QC across human and plant datasets.",
+        "Ensured reproducible results for publications and lab reporting.",
       ],
       engineeringHighlights: [
-        "Built containerized Nextflow pipelines with Docker to ensure reproducible execution across environments.",
-        "Automated multi-stage data ingestion, analysis, and reporting to reduce manual overhead by 40%.",
-        "Integrated code review, versioned workflow configuration, and logging for traceable analysis runs.",
+        "Built containerized Nextflow pipelines with Docker for cross-environment reproducibility.",
+        "Automated data processing to reduce manual overhead by 40%.",
       ],
     },
     {
@@ -82,15 +80,14 @@ export const profile: Profile = {
       organization: "Cedar Gate Technologies",
       location: "Kathmandu, Nepal",
       roleSummary:
-        "Delivered software and engineering practices that improved reliability and delivery for data-driven product teams.",
+        "Delivered software engineering practices for data-driven product teams.",
       domainHighlights: [
-        "Collaborated with analysts and stakeholders to understand data requirements and translate them into product features.",
-        "Built reporting workflows that surfaced business and operational metrics for healthcare and compliance use cases.",
+        "Collaborated with stakeholders to translate data requirements into product features.",
+        "Built reporting workflows for healthcare and compliance metrics.",
       ],
       engineeringHighlights: [
-        "Implemented unit tests, CI pipelines, and technical design reviews to accelerate feature delivery.",
-        "Delivered 2+ features per sprint, optimized support workflows, and reduced production incidents.",
-        "Mentored new team members on clean code, documentation, and scalable system design.",
+        "Implemented testing, CI, and design reviews to accelerate delivery.",
+        "Reduced production incidents and mentored team on best practices.",
       ],
     },
   ],

@@ -10,7 +10,9 @@ export const metadata: Metadata = {
 export default function EducationPage(): React.ReactNode {
   return (
     <main className="py-10 sm:py-14">
-      <Education />
+      <div className="mx-auto max-w-6xl px-6 sm:px-8">
+        <Education />
+      </div>
     </main>
   );
 }

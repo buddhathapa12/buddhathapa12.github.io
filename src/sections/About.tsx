@@ -35,8 +35,6 @@ export default function About(): React.ReactNode {
           <p className="max-w-3xl text-base leading-8 text-slate-600 dark:text-slate-300">
             I turn complex biological data into trusted results by combining
             research-informed analysis with production-grade software systems.
-            My work is designed to make biology workflows reproducible,
-            scalable, and easy to share.
           </p>
           <div className="flex flex-wrap gap-3 text-sm text-slate-600 dark:text-slate-300">
             <span className="rounded-full bg-slate-100 px-3 py-1 font-semibold text-slate-800 dark:bg-slate-900 dark:text-slate-200">
@@ -63,7 +61,7 @@ export default function About(): React.ReactNode {
           ))}
         </div>
 
-        <div className="space-y-14">
+        <div className="space-y-10">
           <AboutOverview />
           <Experience />
           <Education />
