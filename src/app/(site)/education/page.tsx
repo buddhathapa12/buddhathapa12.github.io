@@ -1,4 +1,4 @@
-import Education from "../../sections/Education";
+import Education from "../../../sections/Education";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {

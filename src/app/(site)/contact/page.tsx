@@ -1,4 +1,4 @@
-import Contact from "../../sections/Contact";
+import Contact from "../../../sections/Contact";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {

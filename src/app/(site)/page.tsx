@@ -1,5 +1,5 @@
-import Hero from "../sections/Hero";
-import Skills from "../sections/Skills";
+import Hero from "../../sections/Hero";
+import Skills from "../../sections/Skills";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {

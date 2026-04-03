@@ -1,4 +1,4 @@
-import About from "../../sections/About";
+import About from "../../../sections/About";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {

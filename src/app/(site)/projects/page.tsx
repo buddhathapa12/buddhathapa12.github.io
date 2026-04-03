@@ -1,4 +1,4 @@
-import Projects from "../../sections/Projects";
+import Projects from "../../../sections/Projects";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
