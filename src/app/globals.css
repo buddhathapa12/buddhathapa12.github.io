@@ -68,4 +68,59 @@ body {
     background: rgba(148, 163, 184, 0.2);
     color: inherit;
   }
+
+  .markdown-content {
+    @apply text-base leading-8 text-slate-700 dark:text-slate-300;
+  }
+
+  .markdown-content h1,
+  .markdown-content h2,
+  .markdown-content h3 {
+    @apply mt-8 text-slate-900 dark:text-slate-100;
+  }
+
+  .markdown-content h1 {
+    @apply text-3xl font-semibold;
+  }
+
+  .markdown-content h2 {
+    @apply text-2xl font-semibold;
+  }
+
+  .markdown-content h3 {
+    @apply text-xl font-semibold;
+  }
+
+  .markdown-content p,
+  .markdown-content ul,
+  .markdown-content ol,
+  .markdown-content pre,
+  .markdown-content blockquote {
+    @apply mt-4;
+  }
+
+  .markdown-content ul,
+  .markdown-content ol {
+    @apply pl-6;
+  }
+
+  .markdown-content ul {
+    @apply list-disc;
+  }
+
+  .markdown-content ol {
+    @apply list-decimal;
+  }
+
+  .markdown-content pre {
+    @apply overflow-x-auto rounded-2xl border border-slate-200 bg-slate-950 p-4 text-sm text-slate-100 dark:border-slate-700;
+  }
+
+  .markdown-content code {
+    @apply rounded bg-slate-100 px-1 py-0.5 text-sm text-slate-900 dark:bg-slate-800 dark:text-slate-100;
+  }
+
+  .markdown-content pre code {
+    @apply bg-transparent p-0 text-slate-100;
+  }
 }

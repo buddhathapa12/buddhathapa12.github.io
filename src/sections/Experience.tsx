@@ -25,8 +25,8 @@ export default function Experience(): React.ReactNode {
           </div>
         </div>
         <p className="mb-8 max-w-2xl text-sm text-slate-600 dark:text-slate-300">
-          Roles where I delivered scientific value and engineering reliability
-          side by side.
+          Roles focused on system design, backend workflows, and infrastructure
+          decisions that made scientific and product delivery more reliable.
         </p>
 
         <div className="space-y-6">
@@ -78,6 +78,25 @@ export default function Experience(): React.ReactNode {
               </div>
             </Card>
           ))}
+
+          <Card className="border-slate-200 dark:border-slate-800">
+            <p className="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500 dark:text-slate-400">
+              Open-source and engineering contributions
+            </p>
+            <p className="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-300">
+              Placeholder highlights for upstream contributions, issue triage,
+              and reusable tooling will be added here as public links are
+              finalized.
+            </p>
+            <a
+              href="https://github.com/buddhathapa12"
+              target="_blank"
+              rel="noreferrer"
+              className="mt-4 inline-flex text-sm font-semibold text-slate-700 hover:text-slate-900 dark:text-slate-300 dark:hover:text-slate-100"
+            >
+              Placeholder repositories
+            </a>
+          </Card>
         </div>
       </div>
     </section>

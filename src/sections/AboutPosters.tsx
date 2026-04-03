@@ -1,26 +1,6 @@
 import Link from "next/link";
 import { Monitor, Sparkles } from "lucide-react";
-
-const posterItems = [
-  {
-    title: "Reproducible Genome Workflow Poster",
-    description:
-      "Conference poster showing a reproducible pipeline for genomic analysis.",
-    date: "Mar 2026",
-    href: "/posters/poster-1.pdf",
-    type: "Poster",
-    related: "/blog/bioinformatics-workflows",
-  },
-  {
-    title: "Engineering Biology Systems Talk",
-    description:
-      "Presentation on connecting scientific interpretation with production-ready systems.",
-    date: "Feb 2026",
-    href: "/posters/poster-2.pdf",
-    type: "Talk",
-    related: "/blog/bioinformatics-workflows",
-  },
-];
+import { profile } from "../data/profile";
 
 export default function AboutPosters(): React.ReactNode {
   return (
@@ -45,10 +25,10 @@ export default function AboutPosters(): React.ReactNode {
           </div>
         </div>
         <div className="grid gap-6 md:grid-cols-2">
-          {posterItems.map((poster) => (
+          {profile.talks.map((poster) => (
             <a
               key={poster.title}
-              href={poster.href}
+              href={poster.link ?? "https://example.com/poster-placeholder"}
               target="_blank"
               rel="noreferrer"
               aria-label={`Open ${poster.title}`}
@@ -66,7 +46,8 @@ export default function AboutPosters(): React.ReactNode {
                 {poster.title}
               </h3>
               <p className="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-300">
-                {poster.description}
+                Presented at {poster.event}. Placeholder thumbnails, conference
+                logos, and final downloadable assets will be added here.
               </p>
               <div className="mt-6 flex items-center gap-2 text-sm font-semibold text-indigo-600 transition group-hover:text-indigo-700 dark:text-indigo-300 dark:group-hover:text-indigo-200">
                 <span>Open PDF</span>

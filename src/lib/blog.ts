@@ -11,15 +11,22 @@ export type BlogPostFrontMatter = {
   date: string;
   tags: string[];
   excerpt?: string;
+  difficulty?: "Beginner" | "Intermediate" | "Advanced";
 };
 
 export type BlogPostSummary = BlogPostFrontMatter & {
   slug: string;
+  readingTimeMinutes: number;
 };
 
 export type BlogPost = BlogPostSummary & {
   contentHtml: string;
 };
+
+function estimateReadingTime(text: string): number {
+  const words = text.trim().split(/\s+/).filter(Boolean).length;
+  return Math.max(1, Math.ceil(words / 220));
+}
 
 const blogDirectory = path.join(process.cwd(), "src", "content", "blog");
 
@@ -45,6 +52,10 @@ export function getAllPosts(): BlogPostSummary[] {
         date: data.date as string,
         tags: (data.tags as string[]) ?? [],
         excerpt: data.excerpt as string | undefined,
+        difficulty:
+          (data.difficulty as "Beginner" | "Intermediate" | "Advanced") ??
+          "Intermediate",
+        readingTimeMinutes: estimateReadingTime(source),
       };
     })
     .sort((a, b) => (a.date < b.date ? 1 : -1));
@@ -70,6 +81,10 @@ export async function getBlogPostBySlug(
     date: data.date as string,
     tags: (data.tags as string[]) ?? [],
     excerpt: data.excerpt as string | undefined,
+    difficulty:
+      (data.difficulty as "Beginner" | "Intermediate" | "Advanced") ??
+      "Intermediate",
+    readingTimeMinutes: estimateReadingTime(content),
     contentHtml: processedContent.toString(),
   };
 }

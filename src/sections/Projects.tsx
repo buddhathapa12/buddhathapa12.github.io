@@ -20,7 +20,9 @@ export default function Projects(): React.ReactNode {
             </h2>
             <p className="mt-3 max-w-2xl text-sm text-slate-600 dark:text-slate-300">
               Projects that connect biological research and engineering systems,
-              with clear domain context and reproducible implementation.
+              with clear domain context and reproducible implementation. Each
+              project includes a detailed brief covering data scale, pipeline
+              design, outcomes, and trade-offs.
             </p>
           </div>
 

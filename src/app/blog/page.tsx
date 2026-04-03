@@ -1,5 +1,5 @@
 import { getAllPosts } from "../../lib/blog";
-import BlogCard from "../../components/BlogCard";
+import BlogFilters from "../../components/BlogFilters";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -27,11 +27,7 @@ export default async function BlogPage(): Promise<React.ReactNode> {
           </p>
         </div>
 
-        <div className="grid gap-6">
-          {posts.map((post) => (
-            <BlogCard key={post.slug} post={post} />
-          ))}
-        </div>
+        <BlogFilters posts={posts} />
       </section>
     </main>
   );

@@ -6,6 +6,9 @@ tags:
   - Portfolio
   - Next.js
   - Bioinformatics
+  - Algorithms
+  - Systems
+difficulty: "Beginner"
 excerpt: "A practical walkthrough of migrating a portfolio to Next.js App Router and building a lightweight blog system."
 ---
 

@@ -18,6 +18,10 @@ export default function BlogCard({ post }: BlogCardProps): React.ReactNode {
               year: "numeric",
             })}
           </p>
+          <p className="mt-2 text-xs font-medium text-slate-500 dark:text-slate-400">
+            {post.readingTimeMinutes} min read •{" "}
+            {post.difficulty ?? "Intermediate"}
+          </p>
           <h3 className="mt-3 text-2xl font-semibold text-slate-900 dark:text-slate-100">
             {post.title}
           </h3>

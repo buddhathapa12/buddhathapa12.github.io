@@ -63,6 +63,10 @@ export default async function BlogPostPage({
               year: "numeric",
             })}
           </p>
+          <p className="text-sm text-slate-500 dark:text-slate-400">
+            {post.readingTimeMinutes} min read •{" "}
+            {post.difficulty ?? "Intermediate"}
+          </p>
         </div>
 
         <div className="mb-8 flex flex-wrap gap-2">
@@ -77,7 +81,7 @@ export default async function BlogPostPage({
         </div>
 
         <div
-          className="prose prose-slate dark:prose-invert max-w-none"
+          className="markdown-content max-w-none"
           dangerouslySetInnerHTML={{ __html: post.contentHtml }}
         />
       </article>

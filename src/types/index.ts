@@ -4,12 +4,23 @@ export type NavLink = {
 };
 
 export type Project = {
+  slug: string;
   name: string;
   description: string;
+  problemStatement?: string;
+  dataSources?: string[];
+  dataScale?: string;
+  algorithms?: string[];
+  architecture?: string;
+  results?: string[];
+  tradeoffs?: string[];
+  lessonsLearned?: string[];
   context: string;
   systems: string;
   outcome?: string;
   link: string;
+  publicationLink?: string;
+  demoLink?: string;
   tags: string[];
 };
 
@@ -37,6 +48,29 @@ export type Publication = {
   link?: string;
 };
 
+export type TalkItem = {
+  title: string;
+  event: string;
+  date: string;
+  type: "Talk" | "Poster" | "Tutorial";
+  link?: string;
+};
+
+export type TeachingItem = {
+  title: string;
+  format: string;
+  date: string;
+  summary: string;
+  link?: string;
+};
+
+export type ReproducibilityPractice = {
+  title: string;
+  summary: string;
+  tools: string[];
+  placeholderDiagram: string;
+};
+
 export type Profile = {
   name: string;
   title: string;
@@ -54,5 +88,9 @@ export type Profile = {
   education: EducationItem[];
   experience: ExperienceItem[];
   publications: Publication[];
+  talks: TalkItem[];
+  teaching: TeachingItem[];
+  reproducibility: ReproducibilityPractice[];
+  exploringNow: string[];
   projects: Project[];
 };

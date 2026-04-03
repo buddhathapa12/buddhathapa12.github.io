@@ -5,11 +5,13 @@ import Card from "../components/ui/Card";
 import Experience from "./Experience";
 import Education from "./Education";
 import Publications from "./Publications";
+import Reproducibility from "./Reproducibility";
 
 const sectionLinks = [
   { href: "#overview", label: "Overview" },
   { href: "#experience", label: "Experience" },
   { href: "#education", label: "Education" },
+  { href: "#reproducibility", label: "Reproducibility" },
   { href: "#publications", label: "Publications" },
   { href: "#posters", label: "Posters & Talks" },
 ];
@@ -65,6 +67,7 @@ export default function About(): React.ReactNode {
           <AboutOverview />
           <Experience />
           <Education />
+          <Reproducibility />
           <Publications />
           <AboutPosters />
           <Card

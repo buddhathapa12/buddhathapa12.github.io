@@ -25,7 +25,8 @@ export default function Publications(): React.ReactNode {
           </div>
         </div>
         <p className="mb-8 max-w-2xl text-sm text-slate-600 dark:text-slate-300">
-          Concise examples of interdisciplinary research and analysis.
+          Publications, talks, and teaching artifacts that connect scientific
+          questions with practical engineering decisions.
         </p>
 
         <div className="space-y-6">
@@ -54,6 +55,65 @@ export default function Publications(): React.ReactNode {
               </div>
             </Card>
           ))}
+        </div>
+
+        <div className="mt-8 grid gap-6 lg:grid-cols-2">
+          <Card className="border-slate-200 dark:border-slate-800">
+            <h3 className="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500 dark:text-slate-400">
+              Talks and posters
+            </h3>
+            <ul className="mt-4 space-y-4">
+              {profile.talks.map((item) => (
+                <li key={`${item.title}-${item.date}`}>
+                  <p className="text-sm font-semibold text-slate-900 dark:text-slate-100">
+                    {item.title}
+                  </p>
+                  <p className="mt-1 text-sm text-slate-600 dark:text-slate-300">
+                    {item.event} • {item.date} • {item.type}
+                  </p>
+                  <a
+                    href={item.link ?? "https://example.com/talk-placeholder"}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-2 inline-flex text-sm font-semibold text-slate-700 hover:text-slate-900 dark:text-slate-300 dark:hover:text-slate-100"
+                  >
+                    Slides / artifact
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </Card>
+
+          <Card className="border-slate-200 dark:border-slate-800">
+            <h3 className="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500 dark:text-slate-400">
+              Teaching and mentorship
+            </h3>
+            <ul className="mt-4 space-y-4">
+              {profile.teaching.map((item) => (
+                <li key={`${item.title}-${item.date}`}>
+                  <p className="text-sm font-semibold text-slate-900 dark:text-slate-100">
+                    {item.title}
+                  </p>
+                  <p className="mt-1 text-sm text-slate-600 dark:text-slate-300">
+                    {item.format} • {item.date}
+                  </p>
+                  <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">
+                    {item.summary}
+                  </p>
+                  <a
+                    href={
+                      item.link ?? "https://example.com/teaching-placeholder"
+                    }
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-2 inline-flex text-sm font-semibold text-slate-700 hover:text-slate-900 dark:text-slate-300 dark:hover:text-slate-100"
+                  >
+                    Resource
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </Card>
         </div>
       </div>
     </section>

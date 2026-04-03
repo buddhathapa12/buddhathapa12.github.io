@@ -1,6 +1,7 @@
 import type { Project } from "../types";
 import Button from "./ui/Button";
 import Card from "./ui/Card";
+import Link from "next/link";
 
 type ProjectCardProps = {
   project: Project;
@@ -63,18 +64,26 @@ export default function ProjectCard({
       ) : null}
 
       <div className="mt-6">
-        <Button
-          as="a"
-          href={project.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label={`Open ${project.name} repository`}
-          variant="ghost"
-          className="gap-2"
-        >
-          View repository
-          <span aria-hidden>→</span>
-        </Button>
+        <div className="flex flex-wrap gap-3">
+          <Link
+            href={`/projects/${project.slug}`}
+            className="inline-flex min-h-[44px] items-center justify-center rounded-full bg-slate-900 px-5 py-2 text-sm font-semibold text-white transition hover:bg-slate-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
+          >
+            View project brief
+          </Link>
+          <Button
+            as="a"
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Open ${project.name} repository`}
+            variant="ghost"
+            className="gap-2"
+          >
+            Repository
+            <span aria-hidden>→</span>
+          </Button>
+        </div>
       </div>
     </Card>
   );

@@ -1,5 +1,7 @@
 import Hero from "../../sections/Hero";
 import Skills from "../../sections/Skills";
+import Reproducibility from "../../sections/Reproducibility";
+import ExploringNow from "../../sections/ExploringNow";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -13,6 +15,8 @@ export default function HomePage(): React.ReactNode {
     <main className="pb-10 sm:pb-14">
       <Hero />
       <Skills />
+      <Reproducibility />
+      <ExploringNow />
     </main>
   );
 }
