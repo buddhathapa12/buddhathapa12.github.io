@@ -18,7 +18,7 @@ export default function About(): React.ReactNode {
   return (
     <section
       id="about"
-      className="scroll-mt-24 bg-slate-50 py-16 dark:bg-slate-950"
+      className="scroll-mt-24 bg-slate-50 py-12 dark:bg-slate-950"
       aria-labelledby="about-heading"
     >
       <div className="mx-auto max-w-6xl px-6 sm:px-8">
@@ -61,7 +61,7 @@ export default function About(): React.ReactNode {
           ))}
         </div>
 
-        <div className="space-y-10">
+        <div className="space-y-6">
           <AboutOverview />
           <Experience />
           <Education />

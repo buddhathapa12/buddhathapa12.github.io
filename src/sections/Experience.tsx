@@ -6,7 +6,7 @@ export default function Experience(): React.ReactNode {
   return (
     <section
       id="experience"
-      className="scroll-mt-24 bg-slate-50 py-16 dark:bg-slate-950"
+      className="scroll-mt-24 bg-slate-50 py-12 dark:bg-slate-950"
       aria-labelledby="experience-heading"
     >
       <div className="mb-8 space-y-4">

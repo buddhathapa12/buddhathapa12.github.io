@@ -36,7 +36,7 @@ export default function Skills(): React.ReactNode {
   return (
     <section
       id="skills"
-      className="scroll-mt-24 py-16"
+      className="scroll-mt-24 py-12"
       aria-labelledby="skills-heading"
     >
       <div className="mx-auto max-w-6xl px-6 sm:px-8">
@@ -57,7 +57,7 @@ export default function Skills(): React.ReactNode {
           {skillGroups.map((group) => (
             <Card
               key={group.title}
-              className="border-slate-200 dark:border-slate-800"
+              className="border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-950"
             >
               <div>
                 <h3 className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500 dark:text-slate-400">

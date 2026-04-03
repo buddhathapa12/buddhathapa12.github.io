@@ -6,7 +6,7 @@ export default function AboutOverview(): React.ReactNode {
     <section
       id="overview"
       aria-labelledby="overview-heading"
-      className="scroll-mt-24 py-16"
+      className="scroll-mt-24 py-12"
     >
       <div className="mb-8 space-y-4">
         <div className="flex items-center gap-3">

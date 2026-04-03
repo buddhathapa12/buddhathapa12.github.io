@@ -6,7 +6,7 @@ export default function Hero(): React.ReactNode {
   return (
     <section
       id="hero"
-      className="relative scroll-mt-24 overflow-hidden bg-slate-100 py-16 dark:bg-slate-950"
+      className="relative scroll-mt-24 overflow-hidden bg-slate-100 py-12 dark:bg-slate-950"
       aria-labelledby="hero-heading"
     >
       <div className="pointer-events-none absolute -right-16 top-0 h-72 w-72 rounded-full bg-slate-300/30 blur-3xl dark:bg-slate-700/20" />
@@ -14,7 +14,7 @@ export default function Hero(): React.ReactNode {
 
       <div className="mx-auto max-w-6xl px-6 sm:px-8">
         <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
-          <div className="rounded-[1.5rem] border border-slate-200 bg-white p-8 shadow-sm dark:border-slate-800 dark:bg-slate-950/95">
+          <div>
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500 dark:text-slate-400">
               Computational Biology + Software Systems
             </p>
@@ -32,7 +32,7 @@ export default function Hero(): React.ReactNode {
             </p>
 
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
-              <div className="rounded-3xl border border-slate-200 bg-slate-50 p-4 text-sm dark:border-slate-800 dark:bg-slate-900/90">
+              <div>
                 <p className="font-semibold text-slate-900 dark:text-slate-100">
                   Data-driven biology
                 </p>
@@ -41,7 +41,7 @@ export default function Hero(): React.ReactNode {
                   data.
                 </p>
               </div>
-              <div className="rounded-3xl border border-slate-200 bg-slate-50 p-4 text-sm dark:border-slate-800 dark:bg-slate-900/90">
+              <div>
                 <p className="font-semibold text-slate-900 dark:text-slate-100">
                   Scalable software systems
                 </p>
@@ -64,13 +64,13 @@ export default function Hero(): React.ReactNode {
             <div className="mt-6 grid gap-3 sm:grid-cols-2">
               <a
                 href="/experience"
-                className="rounded-3xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 transition hover:bg-slate-100 dark:border-slate-800 dark:bg-slate-900/90 dark:text-slate-100"
+                className="rounded-3xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 transition-all duration-200 hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900 dark:border-slate-800 dark:bg-slate-900/90 dark:text-slate-100 dark:focus-visible:outline-slate-100"
               >
                 Experience
               </a>
               <a
                 href="/education"
-                className="rounded-3xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 transition hover:bg-slate-100 dark:border-slate-800 dark:bg-slate-900/90 dark:text-slate-100"
+                className="rounded-3xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 transition-all duration-200 hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900 dark:border-slate-800 dark:bg-slate-900/90 dark:text-slate-100 dark:focus-visible:outline-slate-100"
               >
                 Education
               </a>
@@ -79,13 +79,13 @@ export default function Hero(): React.ReactNode {
             <div className="mt-8 grid gap-3 sm:grid-cols-2">
               <a
                 href="/contact"
-                className="rounded-3xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 transition hover:bg-slate-100 dark:border-slate-800 dark:bg-slate-900/90 dark:text-slate-100"
+                className="rounded-3xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 transition-all duration-200 hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900 dark:border-slate-800 dark:bg-slate-900/90 dark:text-slate-100 dark:focus-visible:outline-slate-100"
               >
                 Contact
               </a>
               <a
                 href="/Buddha_Thapa_Magar_CV.pdf"
-                className="rounded-3xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 transition hover:bg-slate-100 dark:border-slate-800 dark:bg-slate-900/90 dark:text-slate-100"
+                className="rounded-3xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 transition-all duration-200 hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900 dark:border-slate-800 dark:bg-slate-900/90 dark:text-slate-100 dark:focus-visible:outline-slate-100"
               >
                 Download CV
               </a>
@@ -96,7 +96,7 @@ export default function Hero(): React.ReactNode {
                 href={profile.github}
                 target="_blank"
                 rel="noreferrer"
-                className="rounded-full border border-slate-200 bg-white px-4 py-2 text-slate-900 transition hover:bg-slate-100 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-100"
+                className="rounded-full border border-slate-200 bg-white px-4 py-2 text-slate-900 transition-all duration-200 hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-100 dark:focus-visible:outline-slate-100"
               >
                 GitHub
               </a>
@@ -104,14 +104,14 @@ export default function Hero(): React.ReactNode {
                 href={profile.linkedin}
                 target="_blank"
                 rel="noreferrer"
-                className="rounded-full border border-slate-200 bg-white px-4 py-2 text-slate-900 transition hover:bg-slate-100 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-100"
+                className="rounded-full border border-slate-200 bg-white px-4 py-2 text-slate-900 transition-all duration-200 hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-100 dark:focus-visible:outline-slate-100"
               >
                 LinkedIn
               </a>
             </div>
           </div>
 
-          <div className="rounded-[1.5rem] border border-slate-200 bg-white p-4 shadow-sm dark:border-slate-800 dark:bg-slate-950/95">
+          <div>
             <Image
               src="/buddha_thapa_profile.jpg"
               alt={`${profile.name} profile`}
